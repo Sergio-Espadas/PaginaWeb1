@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Este será el encabezado de la página que tmabién contendra el menú -->
+    <header>
+      <div class="lang var" key="envio_gratis">
+        Envío Gratis en pedidos superiores a 35€
+      </div>
+      <nav>
+        <div class="menu_navegacion">
+          <a href="main.html">
+            <img
+              id="logo"
+              class="var__logo img-rounded"
+              width="100px"
+              height="100px"
+              src="Imagenes/logo.jpg"
+              alt="No se pudo mostrar la foto"
+            />
+          </a>
+        </div>
+        <div class="barra__navegacion">
+          <div class="icon"><i class="fa fa-bars"></i></div>
+          <div id="init" class="menu_item barra__navegacion__inicio">
+            <a href="main.html" class="lang" key="inicio">Inicio</a>
+          </div>
+          <div class="menu_item barra__navegacion__galeria">
+            <a href="./galeria.html" class="lang" key="galeria">Galería</a>
+          </div>
+          <div class="menu_item barra__navegacion__reservas">
+            <a href="./reserva.html" class="lang" key="reservas">Reservas</a>
+          </div>
+          <div class="menu_item barra__navegacion__nosotros">
+            <a href="./nosotros.html" class="lang" key="nosotros">Nosotros</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Aquí comienza la zona de información adicional -->
+      <section class="information">
+        <article>
+          <h1 class="lang" key="efectuando_reserva">Efectuando Reserva</h1>
+        </article>
+      </section>
+      <button class="translate btn btn-secondary m-1" id="es">ES</button>
+      <button class="translate btn btn-secondary m-1" id="en">EN</button>
+
+      <section style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol id="migas" class="breadcrumb espaciado">
+          <li class="breadcrumb-item">
+            <a href="#" class="lang" key="inicio">Inicio</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="lang" key="reserva">Reserva</a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Formulario de reservas -->
+
+      <section id="confirmation" class="hidden modal_box">
+        <dialog open id="dialog">
+          <div id="dialog-content">
+            <p class="lang" key="confirmacion_reserva">Confirm de la reserva</p>
+          </div>
+          <div class="modal__btn">
+            <button
+              class="btn btn-secondary btn-lg"
+              id="cancel"
+              type="reset"
+              class="lang"
+              key="cancelar"
+            >
+              Cancelar
+            </button>
+            <button
+              class="btn btn-secondary btn-lg"
+              id="confirm"
+              type="submit"
+              class="lang"
+              key="confirmar"
+            >
+              Confirmar
+            </button>
+          </div>
+        </dialog>
+      </section>
+
+      <div class="container">
+        <section id="confirmation" class="hidden modal_box">
+          <dialog open id="dialog">
+            <div id="dialog-content">
+              <p class="lang" key="confirmacion_reserva">
+                Confirm de la reserva
+              </p>
+            </div>
+            <div class="modal__btn">
+              <button
+                class="btn btn-secondary btn-lg"
+                id="cancel"
+                type="reset"
+                class="lang"
+                key="cancelar"
+              >
+                Cancelar
+              </button>
+              <button
+                class="btn btn-secondary btn-lg"
+                id="confirm"
+                type="submit"
+                class="lang"
+                key="confirmar"
+              >
+                Confirmar
+              </button>
+            </div>
+          </dialog>
+        </section>
+
+        <section class="fm">
+          <form
+            id="miReserva"
+            name="fValidation"
+            role="form"
+            class="was-validated reservas"
+          >
+            <div class="row">
+              <div class="col-md-4">
+                <label class="lang form-label" for="vfName" key="nombre"
+                  >Nombre</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-personsquare"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="lang form-control"
+                    key="nombre"
+                    id="vfName"
+                    name="vfName"
+                    placeholder="Nombre"
+                    value=""
+                    required
+                  />
+                  <div class="lang invalid-feedback" key="nombre_obligatorio">
+                    El nombre es obligatorio.
+                  </div>
+                  <div class="valid-feedback" class="lang" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label
+                  class="lang form-label"
+                  for="vfSurname1"
+                  key="primer_apellido"
+                  >Primer apellido *</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-personsquare"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vfSurname1"
+                    name="vfSurname1"
+                    placeholder="Primer apellido"
+                    value=""
+                    required
+                  />
+                  <div
+                    class="lang invalid-feedback"
+                    key="el_appelido_obligatorio"
+                  >
+                    El primer apellido es obligatorio.
+                  </div>
+                  <div class="valid-feedback">Correcto.</div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label" for="vfDni">DNI *</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-personsquare"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vfDni"
+                    name="vfDni"
+                    placeholder="12345678A"
+                    value=""
+                    required
+                    maxlength="9"
+                    pattern="^[0-9]{8}[A-Z]$"
+                  />
+                  <div class="lang invalid-feedback" key="dni_obligatorio">
+                    El DNI debe estar formado por 8 dígitos y una letra.
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label
+                  class="lang form-label"
+                  for="validationServer04"
+                  key="zona"
+                  >Zona</label
+                >
+                <select
+                  class="form-select"
+                  id="validationServer04"
+                  aria-describedby="validationServer04Feedback"
+                  required
+                >
+                  <option selected disabled value="">...</option>
+                  <option class="lang" key="sala1">Sala 1</option>
+                  <option class="lang" key="sala2">Sala 2</option>
+                  <option class="lang" key="sala_infantil">
+                    Sala infantil
+                  </option>
+                  <option class="lang" key="zona_juego">Zona de juegos</option>
+                  <option class="lang" key="terraza_interior">
+                    Terraza Interior
+                  </option>
+                  <option class="lang" key="terraza_exterior">
+                    Terraza exterior
+                  </option>
+                </select>
+                <div
+                  id="validationServer04Feedback"
+                  class="lang invalid-feedback"
+                  key="selecciona_alguna"
+                >
+                  Por favor, selecciona una opción válida.
+                </div>
+                <div class="lang valid-feedback" key="correcto">Correcto.</div>
+              </div>
+
+              <div class="col-md-4">
+                <label class="lang form-label" for="vfPhone" key="telefono"
+                  >Teléfono *</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bitelephone"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vfPhone"
+                    name="vfPhone"
+                    placeholder="Ej: XXX XX XX XX"
+                    value=""
+                    required
+                    maxlength="18"
+                    pattern="\d\d\d \d\d \d\d \d\d$"
+                  />
+                  <div class="lang invalid-feedback" key="movil_valido">
+                    El número de teléfono debe ser un móvil o un fijo.
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label
+                  class="lang form-label"
+                  for="validationServer04"
+                  key="hora"
+                  >Hora</label
+                >
+                <select
+                  class="form-select"
+                  id="validationServer04"
+                  aria-describedby="validationServer04Feedback"
+                  required
+                >
+                  <option selected disabled value="">...</option>
+                  <option>12:00</option>
+                  <option>13:00</option>
+                  <option>14:00</option>
+                  <option>15:00</option>
+                  <option>16:00</option>
+                  <option>17:00</option>
+                  <option>18:00</option>
+                  <option>19:00</option>
+                </select>
+                <div
+                  id="validationServer04Feedback"
+                  class="lang invalid-feedback"
+                  key="selecciona_alguna"
+                >
+                  Por favor, selecciona una opción válida.
+                </div>
+                <div class="lang valid-feedback" key="correcto">Correcto.</div>
+              </div>
+
+              <div class="col-12 text-center mt-3">
+                <button
+                  id="continuar"
+                  type="button"
+                  class="lang btn btn-secondary btn-lg"
+                  key="continuar"
+                >
+                  Continuar
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Formulario de tarjeta -->
+          <form id="miTarjeta" class="was-validated reservas_tarjeta hidden">
+            <div class="row">
+              <div class="col-tarj1 col-md-6">
+                <label class="lang form-label" for="vfName" key="nombre_titular"
+                  >Nombre titular</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-personsquare"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vfName"
+                    name="vfName"
+                    placeholder="Nombre"
+                    value=""
+                    required
+                  />
+                  <div class="lang invalid-feedback" key="nombre_obligatorio">
+                    El nombre es obligatorio.
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-tarj2 col-md-6">
+                <label
+                  class="lang form-label"
+                  for="vfCreditCard"
+                  key="tarjeta_credito"
+                  >Tarjeta de crédito *</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-creditcard"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vfCreditCard"
+                    name="vfCreditCard"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                    value=""
+                    required
+                  />
+                  <div class="lang invalid-feedback" key="tarjeta_no_valida">
+                    La tarjeta de crédito no es válida.
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-tarj3 col-md-6">
+                <label
+                  class="lang form-label"
+                  for="fechaCaducidad"
+                  key="fecha_caducidad"
+                  >Fecha de Caducidad:</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-creditcard"></i
+                  ></span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="fechaCaducidad"
+                    name="fechaCaducidad"
+                    placeholder="Ej: MM/AAAA"
+                    required
+                  />
+                  <div
+                    class="lang invalid-feedback"
+                    key="fecha_caducidad_no_valida"
+                  >
+                    Formato de fecha o fecha no válida
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-tarj4 col-md-6">
+                <label class="form-label" for="cvv">CVV:</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-creditcard"></i
+                  ></span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="cvv"
+                    name="cvv"
+                    placeholder="Ej: XXX"
+                    pattern="[0-9]{3}"
+                    maxlength="3"
+                    required
+                  />
+                  <div class="lang invalid-feedback" key="cvv_no_valido">
+                    Formato de CVV incorrecto
+                  </div>
+                  <div class="lang valid-feedback" key="correcto">
+                    Correcto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 text-center mt-3">
+                <button
+                  id="reservar"
+                  type="button"
+                  class="lang btn btn-secondary btn-lg"
+                  key="reservar"
+                >
+                  Reservar
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="container text-center">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div
+              id="barraGeneral"
+              class="progress espaciado"
+              role="progressbar"
+              aria-label="Danger example"
+              aria-valuenow="100"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div
+                id="barraProgreso"
+                class="progress-bar bg-danger"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </section>
+
+      <!-- Aquí hacemos el footer de la página -->
+      <footer>
+        <section class="pie">
+          <!-- Sobre la comida -->
+          <article>
+            <h1 class="lang" key="nuestra_comida">Nuestra Comida</h1>
+            <p class="lang" key="lo_mas_vendido">Lo mas Vendido</p>
+            <p class="lang" key="promociones">Promociones</p>
+            <p class="lang" key="favoritas">Favoritas para compartir</p>
+            <p class="lang" key="menus_de_pollo">Menus de pollo</p>
+            <p class="lang" key="veggie">Veggie</p>
+          </article>
+
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <!-- Contenido del modal -->
+            <div class="modal-content">
+              <!-- Imagen -->
+              <span class="close">&times;</span>
+              <img
+                class="modal-img"
+                src="./Imagenes/MapaWeb.png"
+                alt="Mapa Web"
+              />
+            </div>
+          </div>
+
+          <!-- Sobre Nosotros -->
+          <article>
+            <h1 class="lang" key="sobre_nosotros">Sobre Nosotros</h1>
+            <p class="lang" key="ofertas">Ofertas</p>
+            <p class="lang" key="cumpleaños">Cumpleaños</p>
+            <p class="lang" key="nuestra_historia">Nuestra Historia</p>
+            <p class="lang" key="bienestar_animal">Bienestar Animal</p>
+            <p class="lang" key="trabaja_con_nosotros">Trabaja con nosotros</p>
+            <button id="open-modal" class="lang no-style" key="mapa_web">
+              Mapa Web
+            </button>
+          </article>
+
+          <!-- Alergenos -->
+          <!-- Politicas -->
+          <article>
+            <h1 class="lang" key="nuticion">Nutrición</h1>
+            <p class="lang" key="alergenos">Alergenos</p>
+            <p class="lang" key="informacion_nutricional">
+              Información Nutricional
+            </p>
+            <h1 class="lang" key="politicas">Políticas</h1>
+            <p class="lang" key="politica_de_privacidad">
+              Política de privacidad
+            </p>
+            <p class="lang" key="uso_de_cookies">Uso de cookies</p>
+          </article>
+
+          <!-- Forma de pago -->
+          <article class="pie__pago">
+            <h1 class="lang" key="metodos_de_pago">Metodos de pago</h1>
+            <div class="pago__image">
+              <img
+                width="50px"
+                height="50px"
+                src="Imagenes/visa.png"
+                alt="No se pudo mostrar la foto"
+              />
+
+              <img
+                width="50px"
+                height="50px"
+                src="Imagenes/mastercard.png"
+                alt="No se pudo mostrar la foto"
+              />
+
+              <img
+                width="50px"
+                height="50px"
+                src="Imagenes/paypal.png"
+                alt="No se pudo mostrar la foto"
+              />
+            </div>
+          </article>
+        </section>
+
+        <!-- Redes Sociales -->
+        <section class="social">
+          <article class="social__copyright">
+            <p class="lang" key="todos_los_derechos_reservados">
+              ©2024 AFC Restaurant Spain. Todos los derechos reservados.
+            </p>
+          </article>
+
+          <article class="social__media">
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/facebook.png"
+              alt="No se pudo mostrar la foto"
+            />
+
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/gorjeo.png"
+              alt="No se pudo mostrar la foto"
+            />
+
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/instagram.png"
+              alt="No se pudo mostrar la foto"
+            />
+
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/whatsapp.png"
+              alt="No se pudo mostrar la foto"
+            />
+
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/youtube.png"
+              alt="No se pudo mostrar la foto"
+            />
+
+            <img
+              width="30px"
+              height="30px"
+              src="Imagenes/tik-tok.png"
+              alt="No se pudo mostrar la foto"
+            />
+          </article>
+        </section>
+      </footer>
+    </main>
+
+    <script type="module" src="./js/miRestaurant.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/funcNosot.js"></script>
+    <script src="./js/funcReserv.js"></script>
+    <script type="module" src="./js/map.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/idioma.js"></script>
+    <script>
+      $(function () {
+        //Captura del evento para mostrar u ocultar
+        $(".icon").click(function () {
+          $(".menu_item").toggle();
+        });
+        $(window).resize(function () {
+          var anchura = $(this).width();
+          if (anchura > 576) {
+            $(".menu_item").show();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

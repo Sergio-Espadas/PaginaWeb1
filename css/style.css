@@ -1,0 +1,1015 @@
+/* General Zone */
+
+body {
+  background-color: #d9d9d9;
+  margin: 0 auto;
+}
+
+.icon {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding-bottom: 5%;
+}
+
+.container h1 {
+  padding-bottom: 8%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: bold;
+}
+
+nav {
+  display: flex;
+  gap: 3em;
+}
+
+.menu_navegacion {
+  width: 1em;
+  padding: 1em;
+}
+
+.barra__navegacion {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  place-items: center center;
+  justify-content: center;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.barra__navegacion a:hover {
+  transform: scale(1);
+  font-weight: 700;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.625;
+  font-family: Nunito, sans-serif;
+}
+
+/* Menu */
+
+.var {
+  background-color: #c93737;
+  width: 100%;
+  height: 20px;
+  color: white;
+  text-align: center;
+}
+
+.var__logo {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+}
+
+.interaction__perfil {
+  justify-self: end; /* Mueve el elemento al final */
+  cursor: pointer;
+}
+
+.interaction__carrito {
+  cursor: pointer;
+}
+
+.navbar__inicio {
+  cursor: pointer;
+}
+
+.navbar__menu {
+  cursor: pointer;
+}
+
+.navbar__galeria {
+  cursor: pointer;
+}
+
+.navbar__reservas {
+  cursor: pointer;
+}
+
+.navbar__nosotros {
+  cursor: pointer;
+}
+
+/* Information zone */
+
+.information {
+  background-color: #1c1c1c;
+  width: 100%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  color: white;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.information article h1 {
+  font-size: 2em;
+  margin: auto;
+  padding: 1em;
+}
+
+.information__var {
+  display: grid;
+  grid-template-columns: 11em 2em 10em 2em 10em 15em;
+  place-items: center center;
+  justify-content: center;
+}
+
+.information__var p {
+  font-size: 1em;
+  padding: 1em;
+  margin: auto;
+}
+
+.information__button {
+  display: grid;
+  cursor: pointer;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  place-items: center center;
+  background-color: #c93737;
+}
+
+/* Zona galaría */
+.col h1 {
+  font-size: 1.5em;
+}
+
+.w-20 {
+  width: 13em;
+}
+
+.information article h1 {
+  font-size: 1.5em;
+  margin: auto;
+  padding: 0.5em;
+}
+
+/* Title zone */
+
+.title h1 {
+  text-align: center;
+  padding-top: 0.5em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.tittle__rect {
+  display: grid;
+  width: 100%;
+  height: 100px;
+  grid-template-columns: 3% 2% 3%;
+  place-items: center center;
+  justify-content: center;
+}
+
+.rect__left {
+  background-color: #c93737;
+  width: 20px;
+  height: 80px;
+  animation: tr 1s 1;
+  animation-composition: replace;
+}
+
+.rect__center {
+  background-color: #c93737;
+  width: 20px;
+  height: 100px;
+  animation: tr 1s 1;
+  animation-composition: replace;
+}
+
+.rect__right {
+  background-color: #c93737;
+  width: 20px;
+  height: 80px;
+  animation: tr 1s 1;
+  animation-composition: replace;
+}
+
+@keyframes tr {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Zona de nosotros */
+.img360 {
+  width: 20em;
+  height: 20em;
+}
+
+.title__title {
+  font-weight: bold;
+}
+
+/* Categorias de platos en el inicio */
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  place-items: center center;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  place-items: center center;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+/* Hamburguesas */
+
+.category__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category__photo {
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+}
+
+.category_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category_info h3 {
+  color: #c93737;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.category_info p {
+  font-weight: bold;
+  color: #1c1c1c;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+/* Este será el footer */
+
+footer {
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 80vh;
+  color: #d9d9d9;
+}
+
+.pie {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  place-items: start center;
+  justify-content: center;
+  padding-top: 3em;
+  font-size: 15px;
+}
+
+.pie h1 {
+  font-size: 20px;
+}
+
+.pie__pago {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  place-items: center center;
+  justify-content: center;
+}
+
+.pago__image {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  place-items: center center;
+}
+
+.social {
+  display: grid;
+  height: 10em;
+  grid-template-columns: repeat(2, 50%);
+  place-items: end center;
+}
+
+.social__media {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* Divide el espacio en 6 columnas iguales */
+  gap: 2em; /* Espacio entre las imágenes */
+}
+
+.social__media img {
+  width: 3em;
+  height: 3em;
+}
+
+/* Producto individual */
+.card {
+  border: none;
+}
+.product {
+  background-color: #eee;
+}
+.brand {
+  font-size: 13px;
+}
+.act-price {
+  color: #faa541;
+  font-weight: 700;
+}
+.dis-price {
+  text-decoration: line-through;
+}
+
+.color {
+  margin-bottom: 10px;
+}
+label.radio {
+  cursor: pointer;
+}
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+label.radio span {
+  padding: 2px 9px;
+  border: 2px solid #faa541;
+  border-radius: 5px;
+  display: inline-block;
+  color: #faa541;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+label.radio input:checked + span {
+  border-color: #faa541;
+  background-color: #faa541;
+  color: #fff;
+}
+.cart i {
+  margin-right: 10px;
+}
+#main-image {
+  width: 40vh;
+}
+
+/* Ficha de restaurante */
+.ficha {
+  display: grid;
+  place-items: center center;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 4em;
+}
+
+.ficha__container {
+  border: 2px solid #1c1c1c;
+  border-radius: 5px;
+}
+
+.ficha__info {
+  display: grid;
+  place-items: center center;
+  border: 2px solid #1c1c1c;
+  border-radius: 5px;
+}
+
+.ficha__info h3 {
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reservas__pt1 {
+  display: block;
+}
+
+.reservas__pt2 {
+  display: none;
+}
+
+.espaciado {
+  margin: 2%;
+}
+
+.grid-prop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center center;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.no-style {
+  background-color: transparent;
+  color: #fefefe;
+  border: none;
+  cursor: pointer;
+}
+
+.about {
+  padding: 4.5em;
+  text-align: center;
+}
+
+/* Menu desplegable */
+
+/* MODELO RESPONSIVE TABLET */
+
+@media (max-width: 768px) {
+  /* Barra del menu */
+  .barra__navegacion {
+    display: grid;
+    font-size: 0.8em;
+    grid-template-columns: repeat(9, 1fr);
+    place-items: center center;
+    justify-content: center;
+    padding-top: 1em;
+    padding-left: 1em;
+  }
+
+  .var__logo {
+    width: 4em;
+    height: 4em;
+  }
+
+  .barra__navegacion a:hover {
+    transform: scale(1);
+    font-weight: 2%;
+  }
+
+  /* Barra de información */
+  .information {
+    background-color: #1c1c1c;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: white;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+
+  .information__var {
+    display: grid;
+    grid-template-columns: 10em 1em 7em 1em 8em 8em;
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .information__var p {
+    font-size: 0.8em;
+    padding: 1.1em;
+    margin: auto;
+  }
+
+  .information__button {
+    display: grid;
+    cursor: pointer;
+    width: 6em;
+    height: 80%;
+    border-radius: 5px;
+    place-items: center center;
+    background-color: #c93737;
+  }
+
+  /* Title zone */
+
+  .title h1 {
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .tittle__rect {
+    display: grid;
+    width: 100%;
+    height: 100px;
+    grid-template-columns: 4% 3% 4%;
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .rect__left {
+    background-color: #c93737;
+    width: 15px;
+    height: 60px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  .rect__center {
+    background-color: #c93737;
+    width: 15px;
+    height: 80px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  .rect__right {
+    background-color: #c93737;
+    width: 15px;
+    height: 60px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  /* Categorias de platos en el inicio */
+
+  .category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center center;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  .dishes {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    place-items: center center;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  /* Hamburguesas */
+
+  .category__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .img-fluid {
+    width: 10em;
+  }
+
+  .category__photo {
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+  }
+
+  .category_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category_info h3 {
+    color: #c93737;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .category_info p {
+    font-weight: bold;
+    color: #1c1c1c;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+
+  /* Zona de galeria */
+
+  .w-20 {
+    width: 10em;
+  }
+
+  /* Zona footer */
+
+  footer {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 50%;
+    color: #d9d9d9;
+  }
+
+  .pie {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    place-items: start center;
+    justify-content: center;
+    padding-top: 3em;
+    font-size: 10px;
+  }
+
+  .pie h1 {
+    font-size: 15px;
+  }
+
+  .pie__pago {
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .pago__image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center center;
+  }
+
+  .pago__image img {
+    width: 8vh;
+  }
+
+  .social__copyright {
+    font-size: 60%;
+  }
+
+  .social {
+    display: grid;
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .social__media {
+    display: grid;
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* Divide el espacio en 6 columnas iguales */
+    place-items: center center;
+    justify-content: center;
+    gap: 1.5em; /* Espacio entre las imágenes */
+  }
+
+  .social__media img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .title {
+    padding: 2.5em;
+    text-align: center;
+  }
+}
+
+/* MODELO RESPONSIVE MOVIl */
+
+@media (max-width: 435px) {
+  .var {
+    font-size: 0.8em;
+  }
+
+  .icon {
+    display: flex;
+    margin: 2em;
+  }
+
+  /* Zona nosotros */
+  .img360 {
+    width: 15em;
+    height: 15em;
+  }
+
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .title {
+    font-size: 1em;
+    padding: 1.5em;
+    text-align: center;
+  }
+
+  .qnSomos {
+    font-size: 1.5em;
+  }
+
+  .title__title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  /* Barra del menu */
+  .barra__navegacion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu_item {
+    width: 7em;
+    height: 3em;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu_navegacion {
+    width: 1em;
+    padding: 1em;
+  }
+
+  .barra__navegacion a:hover {
+    transform: scale(1);
+    font-weight: 700;
+  }
+
+  .barra__navegacion a:hover {
+    transform: scale(1);
+    font-weight: 2%;
+  }
+
+  /* Barra de información */
+  .information {
+    background-color: #1c1c1c;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: white;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+
+  .information__var {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .information__var p {
+    font-size: 0.6em;
+    margin: auto;
+  }
+
+  .information__button {
+    display: none;
+  }
+
+  /* Migas de pan */
+  .breadcrumb {
+    font-size: 0.8em;
+  }
+
+  /* Title zone */
+
+  .title h1 {
+    text-align: center;
+    padding-top: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .tittle__rect {
+    display: grid;
+    width: 100%;
+    height: 100px;
+    grid-template-columns: 1em 1.5em 1em;
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .rect__left {
+    background-color: #c93737;
+    width: 10px;
+    height: 50px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  .rect__center {
+    background-color: #c93737;
+    width: 10px;
+    height: 70px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  .rect__right {
+    background-color: #c93737;
+    width: 10px;
+    height: 50px;
+    animation: tr 1s 1;
+    animation-composition: replace;
+  }
+
+  /* Zona de galería */
+
+  .information article h1 {
+    font-size: 1em;
+    margin: auto;
+    padding: 1em;
+  }
+
+  /* Categorias de platos en el inicio */
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  .dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  /* Hamburguesas */
+
+  .category__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .img-fluid {
+    width: 10em;
+  }
+
+  .category__photo {
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+  }
+
+  .category_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category_info h3 {
+    color: #c93737;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .category_info p {
+    font-weight: bold;
+    color: #1c1c1c;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+
+  /* Zona footer */
+
+  footer {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 50%;
+    color: #d9d9d9;
+  }
+
+  .pie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    text-align: center;
+    padding-top: 3em;
+    font-size: 1em;
+  }
+
+  .pie h1 {
+    font-size: 1.5em;
+  }
+
+  .pie__pago {
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    place-items: center center;
+    justify-content: center;
+  }
+
+  .pago__image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center center;
+  }
+
+  .pago__image img {
+    width: 8vh;
+  }
+
+  .social__copyright {
+    font-size: 60%;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .social__media {
+    display: grid;
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* Divide el espacio en 6 columnas iguales */
+    place-items: center center;
+    justify-content: center;
+    gap: 1.5em; /* Espacio entre las imágenes */
+  }
+
+  .social__media img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  /* Menu desplegable */
+  .menu_list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu_item {
+    display: block;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+}

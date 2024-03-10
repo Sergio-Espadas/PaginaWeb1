@@ -28,7 +28,7 @@ class RestaurantView {
                 `<div class="category__container">
                     <a data-category="${category.name.name}" href="#product-list">
                         <div class="category__photo"><img class="img-fluid" alt="${category.name.name}"
-                            src="../Imagenes/${category.name.name}.jpg" />
+                            src="./Imagenes/${category.name.name}.jpg" />
                         </div>
                         <div class="cat-list-text category_info">
                             <h3>${category.name.name}</h3>
@@ -136,7 +136,7 @@ class RestaurantView {
                 `<div class="category__container">
                     <a data-category="${dish.dishes[0].name[aleatorio].name}" href="#product-list">
                         <div class="category__photo"><img class="img-fluid" alt="${dish.dishes[0].name[aleatorio].name}"
-                        src="../Imagenes/${dish.dishes[0].name[aleatorio].name}.jpg" />
+                        src="./Imagenes/${dish.dishes[0].name[aleatorio].name}.jpg" />
                         </div>
                         <div class="cat-list-text category_info">
                             <h3>${dish.dishes[0].name[aleatorio].name}</h3>
@@ -243,7 +243,7 @@ class RestaurantView {
                 `<div class="category__container">
                     <a data-category="${dish.name}">
                         <div class="category__photo"><img class="img-fluid" alt="${dish.name}"
-                            src="../Imagenes/${dish.name}.jpg" />
+                            src="./Imagenes/${dish.name}.jpg" />
                         </div>
                         <div class="cat-list-text category_info">
                             <h3>${dish.name}</h3>
@@ -280,7 +280,7 @@ class RestaurantView {
                 `<div class="category__container">
                     <a data-category="${dish.name}">
                         <div class="category__photo"><img class="img-fluid" alt="${dish.name}"
-                            src="../Imagenes/${dish.name}.jpg" />
+                            src="./Imagenes/${dish.name}.jpg" />
                         </div>
                         <div class="cat-list-text category_info">
                             <h3>${dish.name}</h3>
@@ -316,7 +316,7 @@ class RestaurantView {
                 `<div class="category__container">
                     <a data-category="${dish.name}">
                         <div class="category__photo"><img class="img-fluid" alt="${dish.name}"
-                            src="../Imagenes/${dish.name}.jpg" />
+                            src="./Imagenes/${dish.name}.jpg" />
                         </div>
                         <div class="cat-list-text category_info">
                             <h3>${dish.name}</h3>
@@ -351,7 +351,7 @@ class RestaurantView {
             `<div class="ficha__container">
                 <a data-category="${restaurants.name}">
                     <div class="ficha__imagen">
-                    <img class="img-fluid" src="../Imagenes/restaurante.jpg" alt="${restaurants.name}">
+                    <img class="img-fluid" src="./Imagenes/restaurante.jpg" alt="${restaurants.name}">
                     </div>
                     <div class="ficha__info">
                         <h3>${restaurants.name}</h3>
@@ -398,7 +398,7 @@ class RestaurantView {
                                 <div class="col-md-6">
                                     <div class="images p-3">
                                         <div class="text-center p-4"> <img id="main-image"
-                                            src="../Imagenes/${dish.name}.jpg"" /> </div>
+                                            src="./Imagenes/${dish.name}.jpg"" /> </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
